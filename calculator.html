@@ -1,0 +1,99 @@
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        #calBorder {
+            height: 295px;
+            width: 400px;
+            background-color: aquamarine;
+            border: 2px solid mediumslateblue;
+            border-radius: 10px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        #input-result {
+            width: 395px;
+            height: 40px;
+            background-color: whitesmoke;
+            text-align: right;
+            font-size: 20px;
+            border: 1px solid green;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px grey;
+            padding: 10px;
+        }
+        .btn {
+            background-color: rgba(0, 0, 247, .5);
+            width: 75px;
+            height: 40px;
+            border: 0;
+            border-radius: 3px;
+            box-shadow: 2px 3px 10px grey;
+            margin: 10;
+            padding: 0;
+            font-size: 25px;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+        }
+        .btn-equal {
+            background-color: green !important;
+            opacity: .7;
+        }
+        .btn-clear {
+            background-color: red !important;
+            opacity: .7;
+        }
+        h1 {
+            text-align: center;
+        }
+        input:hover {
+            box-shadow: 1px 1px 5px red;
+            transform: translateX(1px);
+            -webkit-transform: translateX(1px);
+        }
+    </style>
+</head>
+<body><br><br><br>
+    <h1>Calculator</h1>
+    <div id="calBorder">
+        <form name="cal">
+            <table>
+                <tr>
+                    <td colspan="4"><input id="input-result" type="text" name="r1" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" value="1" onclick="cal.r1.value+='1'"></td>
+                    <td><input class="btn" type="button" value="2" onclick="cal.r1.value+='2'"></td>
+                    <td><input class="btn" type="button" value="3" onclick="cal.r1.value+='3'"></td>
+                    <td><input class="btn" type="button" value="+" onclick="cal.r1.value+='+'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" value="4" onclick="cal.r1.value+='4'"></td>
+                    <td><input class="btn" type="button" value="5" onclick="cal.r1.value+='5'"></td>
+                    <td><input class="btn" type="button" value="6" onclick="cal.r1.value+='6'"></td>
+                    <td><input class="btn" type="button" value="-" onclick="cal.r1.value+='-'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" value="7" onclick="cal.r1.value+='7'"></td>
+                    <td><input class="btn" type="button" value="8" onclick="cal.r1.value+='8'"></td>
+                    <td><input class="btn" type="button" value="9" onclick="cal.r1.value+='9'"></td>
+                    <td><input class="btn" type="button" value="/" onclick="cal.r1.value+='/'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn btn-clear" type="reset" value="c"></td>
+                    <td><input class="btn" type="button" value="0" onclick="cal.r1.value+='0'"></td>
+                    <td><input class="btn btn-equal" type="button" value="=" onclick="cal.r1.value=eval(cal.r1.value)"></td>
+                    <td><input class="btn" type="button" value="*" onclick="cal.r1.value+='*'"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
